@@ -27,6 +27,8 @@ function resetStyles() {
   body.style.display = 'none';
   navbar.classList.remove('active');
   opacity2();
+  list.style.display ='none';
+  hamburger.style.display ='block';
 
 }
 

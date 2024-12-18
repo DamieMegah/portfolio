@@ -937,7 +937,772 @@ nav a:focus i{
 
 /* MOBILE */
 
-@media (min-width:320px) and (max-width:760px) {
+@media (min-width:320px) and (max-width:399px) {
+      
+    html{
+        font-size: 67%;
+        overflow:hidden ;
+        
+    }
+    
+    body{
+        display: flex;
+        padding: 2rem;
+        color: var(--white);
+        background-image: var(--back-image);
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+        width: 99vw;
+        height: 100vh;
+        overflow:hidden;
+        
+
+
+    }
+    body .damie{
+        align-self:center ;
+        position:absolute ;
+        top:67rem;
+        left:13rem;
+        font-size:1.1rem
+            }
+    
+    .body h1{
+        position: absolute;
+        left: 9.7rem;
+        top: -6rem;
+        display: block;
+    }
+
+    
+.body .info button{
+    padding:  2rem 3rem;
+    border: .1px solid var(--transparent);
+
+}
+    
+
+
+    .bar{
+    position: fixed;
+    display: block;
+    font-size:3rem;
+    left: 27.5rem;
+    top:1rem;
+    color: var(--white);
+    padding: 1rem;
+    z-index: 50;
+    border: .1px solid var(--transparent);
+    background: var(--transparent);
+}
+    .fa-list{
+        display : none;
+        position:relative;
+    }
+
+    .bar:hover{
+         border: 2px solid var(--white);
+         padding: 0.6rem;
+    }
+
+    
+    .bar:focus{
+       border:var(--white) ;
+       color: var(--logo-color);
+    }
+    
+    .nav{
+        margin-left: -2rem;
+        top: 0.2rem;
+        background: none;
+        
+    }
+    .nav  .mode{
+        display:flex ;
+        flex-direction:column ;
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 40rem;
+        padding: 0.3rem;
+        background: var(--transparent);
+      
+        
+    }
+    
+    
+    .nav .btns{
+        display: flex;
+        gap:1.8rem ;
+        padding:1rem 4rem;
+        height: 8rem;
+        width: 25rem;
+        background: none;
+        
+    }
+    
+    .nav .btns button{
+        font-size:2.2rem;
+        background:none;
+        padding: 1rem;
+        border: .1px solid var(--white);
+        
+    }
+
+    
+    .nav .btns button:focus{
+        border: 3px solid var(--logo-color);
+}
+
+nav .btns button .fas {
+padding: .4rem;
+-webkit-text-fill-color: var(--white);
+-webkit-text-stroke: 1px var(--black);
+}
+
+
+
+.nav .nav2{
+    position:fixed;
+    left:90rem;
+    top: 6rem;
+    margin-left: 22rem;
+    display:flex ;
+    flex-direction:column;
+    gap:2rem;
+    background: var(--black);
+    font-size:1.6rem;
+    width: 12rem;
+    padding:1rem 2.4rem;
+    box-shadow: var(--box-shadow);
+    z-index:20;
+    
+}
+
+.nav .nav2 a {
+color: var(--white);
+padding-bottom: .2rem;
+white-space: nowrap;
+border-bottom:1px ridge var(--white);
+}
+
+
+
+nav:focus-within  a:focus{
+cursor:not-allowed;
+transform: scale(1.1);
+color: var(--black);
+background-color: var(--white);
+
+}
+
+nav a:focus i{
+text-shadow: none;
+transform: scale(1.2);
+}
+
+
+
+.nav .nav2 a:focus{
+    border-bottom:2px ridge var(--white)
+}
+
+
+.nav .nav2.active{
+   left:0;
+}    
+   
+
+
+
+.body{
+
+position:fixed;
+display:flex;
+flex-direction: column;
+left:0rem;
+top:14rem;
+padding: 1rem ;
+width: 35rem;
+height: 50rem;
+background: var(--transparent);
+
+}
+
+.body .info{
+position: relative;
+display:flex ;
+margin: 0;
+left: -14rem;
+flex-direction: column;
+align-items: center ;
+padding:1rem 0rem;
+
+}
+
+.body .info img{
+width: 20rem;
+height: 20rem;
+border-radius:100%;
+}
+
+
+.body .info .div{
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+
+
+
+}
+
+.body .info h2{
+font-size: 1.4rem;
+font-weight: bolder;
+color: var(--white);
+margin:1.6rem ; 
+margin-left:3rem;  
+ background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+background-size: 200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color: var(--white);
+animation: glitter 3s infinite linear;
+animation-delay: 10s;
+animation-fill-mode: forwards;
+
+}
+
+
+
+
+@keyframes glitter {
+0%{
+    -webkit-text-fill-color: var(--white);
+    background-position: 0% 50%;}
+50%{-webkit-text-fill-color: transparent;
+    background-position: 100% 50%;}
+100%{background-position: 0% 50%;}
+}
+
+.body .info h5{
+font-size: 1.1rem;
+font-style: italic;
+margin-left:8rem;
+margin-top: -2.6rem;
+font-weight: 100;
+}
+
+.body .info .skill{
+align-self: center;
+display: flex;
+gap: 1rem;
+
+
+}
+
+.body .info .skill div{
+position: relative;
+top: 2rem;
+margin: 1rem;
+font-size: .7rem;
+display: flex;
+justify-content: center;
+
+}
+
+.body .info .skill i{
+    position: absolute;
+    top: -2.5rem;
+    font-size: 2rem;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: 1px var(--logo-color);
+}
+
+
+.body .info button{
+    padding: 1rem 3rem;
+    border: .1px ridge var(--white);
+    margin-top: 1rem;
+    border-radius: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background: transparent;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke: .6px var(--logo-color);
+    cursor: pointer;
+
+}
+
+.body .info button:hover{
+     background-color: var(--white);
+    -webkit-text-fill-color: var(--black);
+    -webkit-text-stroke: .8px var(--black);
+}
+
+    blockquote{
+    margin: 1rem 0rem;
+    font-style: italic;
+    align-self: center;
+}
+
+
+ 
+    
+.about-body{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    left:-1rem;
+    top:14rem;
+    height:50rem;
+    width: 41rem;
+    padding: 1rem 1rem ;
+    background: var(--transparent);
+    overflow:scroll;
+    overflow-wrap:wrap;
+    display:none;
+    
+    }
+    
+    .about-body .text h1{
+        position:fixed ;
+        top:10rem;
+        left:8rem;
+        font-size: 2rem;
+    }
+
+    
+    .about-body .text{
+        width: 38.4rem;
+    
+    }
+    
+    
+    
+     .about-body p{
+        font-size: 1.3rem;
+        line-height: 1.3;
+        text-transform:none;
+        width: 34rem;
+        margin-left: -0.4rem;
+        overflow-y:scroll;
+     }
+
+     button{
+        position: static;
+        display: block;
+        padding: 1rem 3rem;
+        color: var(--white);
+        background: transparent;
+        border: .1px solid var( --white);
+     }
+
+     .about-body .p1{
+        
+         position: relative;
+         margin-top: 43rem;
+        
+     }
+
+       
+       .about-body .image img{
+       position: absolute;
+       left:1rem;
+       top: 1rem;
+       width: 33rem;
+       border-radius: 1rem;
+    
+       
+        
+   
+     }
+    
+
+.contact{
+  display: flex;
+  position: fixed;
+  height: 52rem;
+  width: 40rem;
+  left: -2.2rem;
+  top: 14rem;
+  padding: 1rem 2rem;
+  overflow:scroll;
+  overflow-wrap:wrap;
+  display: none;
+
+}
+
+
+.contact .contact-body{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: 0;
+    background: var(--transparent);
+
+}
+
+
+.contact .contact-body  img{
+    width: 35rem;
+}
+
+
+.contact .contact-body h2{
+    position:fixed ;
+    top:8rem;
+    left:8rem;
+    font-size: 1.9rem;
+    border-bottom: .1rem solid var(--white);
+}
+
+
+
+.contact .contact-body .quick{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    gap: 6rem;
+    margin: 0;
+    padding: 3.5rem 5rem;
+    border: 1px ridge var(--transparent);
+    background: var(--transparent);
+ }
+
+ 
+.contact .contact-body .quick a{
+    color:var(--white);
+    text-shadow: 0.2px 1.2px 0.2px #351f1000;
+    margin:0 4rem;
+    margin-left: -2rem;
+    font-size: 2rem;
+    white-space: nowrap;
+    
+}
+
+
+
+.contact .contact-body .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 -3rem;
+    background: var(--transparent);
+}
+
+
+.contact .contact-body .message h4{
+    font-size: 2.8rem;
+    margin: 1rem 4rem;
+    text-wrap: nowrap;
+    text-shadow: 1px 2px 2px rgba(0,0,0.1);
+}
+
+
+.contact .contact-body .message form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    height: max-content;
+    background: var(--transparent);
+}
+
+
+.contact .contact-body .message form input{
+    color: var(--white);
+    width: 25rem;
+    height: 2.4rem;
+    border: .1px solid var(--white);
+    background: transparent;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+
+
+
+.contact .contact-body .message form textarea{
+    width: 30rem;
+    padding: .5rem;
+    
+}
+
+.contact .contact-body .message form textarea:focus{
+    position: absolute;
+    width: 38rem;
+    height: 10rem;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    padding: 2rem;
+}
+
+.contact .contact-body .message form button{
+    padding: .5rem 13.5rem;
+    font-size: 1.4rem;
+    color: var(--white);
+    background: transparent;
+    border: .1px ridge var(--white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.contact .contact-body .message form button:hover{
+    background:var(--white);
+    color: var(--white);
+}
+
+
+.service {
+    display: flex;
+    left:-3rem;
+    height: 50rem;
+    width: 38.4rem;
+    top: 10rem;
+    overflow:scroll;
+    overflow-wrap:wrap;
+    display: none;
+}
+ 
+.service::before{
+    content:'MY SERVICES';
+    position: fixed;
+    top:10rem;
+    left:11rem;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    border-bottom: .1rem solid var(--white);
+
+}
+
+.service .service-body{
+    width: 36rem;
+    overflow:scroll;
+}
+
+
+.service .box-container{
+    display: grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+    align-self: flex-start;
+    margin-top: 1rem;
+    
+}
+
+
+
+
+.service .box-container .box{
+    padding: 0rem 1rem;
+    margin:0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    width: 32rem;
+    height: 20rem;
+    border: .1px ridge var(--white);
+    overflow: hidden;
+
+}
+
+
+.service .box-container .box img{
+    aspect-ratio: 2;
+    width:28rem;
+    height: 15rem;
+    cursor: pointer;
+}
+
+
+.service .box-container .box img:hover{
+    transform: scale(1.1);
+}
+
+
+.service .box-container .box h4{
+    white-space: nowrap;
+}
+
+.service .box-container .box span{
+    white-space: nowrap;
+}
+
+
+.shine{
+    position: relative;
+}
+
+.shine::after{
+    content: "";
+    position:absolute;
+    top: 0; left: 0;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+    transform: skewX(-0.09turn) translateX(-180%);
+}
+
+.shine:is(:hover, :focus-within)::after{
+    transform: skewX(-0.08turn) translateX(375%);
+    transition: 1000ms ease;
+}
+
+
+.portfolio{
+    position:fixed;
+    display:flex;
+    flex-direction: column;
+    left:-2rem;
+    top:14rem;
+    height:50rem;
+    width: 36rem;
+    background: var(--transparent);
+    overflow:scroll;
+    overflow-wrap:wrap;
+    display: none;
+}
+
+.portfolio .portfolio-body{
+    width: 40rem;
+    margin: -2rem;
+    grid-template-columns:  1fr;
+
+}
+
+.portfolio h2{
+    position:fixed ;
+    display: block;
+    top:10rem;
+    left:11rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: .1rem solid var(--white);
+}
+
+
+ .portfolio-body .port-item{
+   
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.portfolio .portfolio-body img{
+    width: 32rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.portfolio .portfolio-body .port-item a{
+    color: rgb(71, 39, 189);
+    background-color: var(--logo-color);
+    border-radius: 0;
+    padding: 0.5rem .5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: bolder;
+    
+}
+
+
+ .port-item:hover img{
+    transform: scale(1.3);
+}
+
+
+.portfolio .portfolio-body .port-item a:hover{
+    color: var(--white);
+    background-color: var(--black);
+    font-style:normal;
+    border-bottom: .1px solid var(--white);
+}
+
+
+.support{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    width: 38rem;
+    top: 14rem;
+    left: -1rem;
+    padding: 1rem;
+    overflow:scroll;
+    overflow-wrap:break-word;
+    display: none;
+}
+
+
+.support .support-body{
+    margin-top: 5rem;
+    width: 30rem;
+    height: 50rem;
+    border: 0;
+
+}
+
+
+.support .support-body h4{
+    position:fixed;
+    top: 10rem;
+    left: 8.4rem;
+    border-bottom: .1px solid var(--white);
+    font-size: 1.9rem;
+    text-transform: uppercase;
+
+}
+
+
+.support .support-body p{
+    position: relative;
+    top: -1rem;
+    left: 3rem;
+    font-size: 1.5rem;
+}
+
+
+.support .support-body img{
+    width: 32rem;
+    height: 30rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+
+
+.support .support-body .in-body{
+    position: static;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.support .support-body .in-body h6{
+    font-size: 1.1rem;
+
+}
+
+}
+
+
+
+
+@media (min-width:400px) and (max-width:760px) {
       
     html{
         font-size: 68%;
@@ -1158,7 +1923,6 @@ border-radius:100%;
 display: flex;
 flex-direction: column;
 gap: 1.2rem;
-margin-left: 0rem;
 
 
 
@@ -1223,7 +1987,7 @@ justify-content: center;
     top: -2.5rem;
     font-size: 2rem;
     -webkit-text-fill-color:transparent;
-    -webkit-text-stroke: 1px var(--logo-color);
+    -webkit-text-stroke: 1px var(--white);
 }
 
 
@@ -1242,7 +2006,7 @@ justify-content: center;
 }
 
 .body .info button:hover{
-     background-color:var(--white);
+     background-color: var(--white);
     -webkit-text-fill-color:var(--black);
     -webkit-text-stroke: .8px var(--black);
 }
@@ -1291,7 +2055,7 @@ justify-content: center;
         line-height: 1.5;
         text-transform:none;
         width: 38rem;
-        overflow:scroll;
+        overflow-y:scroll;
      }
 
      button{
@@ -1305,22 +2069,23 @@ justify-content: center;
 
      .about-body .p1{
         
-        position: relative;
-        margin-top: 43rem;
-    }
+         position: relative;
+         margin-top: 43rem;
+     }
 
-      
-      .about-body .image img{
-      position: absolute;
-      left:1rem;
-      top: 1rem;
-      width: 35rem;
-      border-radius: 1rem;
-   
-      
        
-  
-    }
+       .about-body .image img{
+       position: absolute;
+       left:1rem;
+       top: 1rem;
+       width: 35rem;
+       border-radius: 1rem;
+    
+       
+        
+   
+     }
+    
 
 .contact{
   display: flex;
@@ -1699,7 +2464,6 @@ justify-content: center;
 }
 
 }
-
 /* TABLETS */
 
 @media (min-width:761px) and (max-width:790px)  {
