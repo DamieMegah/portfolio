@@ -962,7 +962,24 @@ nav a:focus i{
 }
 
 
+@media (min-width:320px) and (max-width:390){
+    body{
+        display: flex;
+        padding: 2rem;
+        color: var(--white);
+        background-image: var(--back-image);
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+        margin-left:-1rem;
+        width: 100vw;
+        height: 100vh;
+        overflow:hidden;
+        
 
+    }
+    
+}
 
 
 
