@@ -181,8 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('resize', updateCSS);
 });
-
-document.getElementById('learn').onclick = function () {
-    window.open("https://github.com/DamieMegah", "_blank");
-}
+ document.getElementById('learn').onclick = function () {
+        let about = document.getElementById('about');
+        
+        // Toggle between 'none' and 'flex'
+        about.style.display = (about.style.display === 'none' || about.style.display === '') ? 'flex' : 'none';
+    };
 
