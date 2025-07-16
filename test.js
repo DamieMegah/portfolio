@@ -52,18 +52,6 @@ document.querySelector('#about')?.addEventListener('click', () => {
 
   
   });
-function setupAboutClick() {
-  const about = document.querySelector('#about');
-  if (!about) return;
-
-  about.addEventListener('click', () => {
-    resetStyles();
-    about.style.display = 'flex';
-  });
-}
-
-// Call the function to attach the listener
-setupAboutClick();
 
 
   
