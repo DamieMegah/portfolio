@@ -1,184 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atoyebi Damilare Moses - CV</title>
-    <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atoyebi Damilare Moses - CV</title>
 
-        html{
-            font-size: 98%;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e2e2d9;
-            color: #333;
-        }
+  <!-- Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
 
-        .download-btn{
-            border: .4px ridge rgb(166, 230, 17);
-            padding: 1rem;
-            color: white;
-            background:black;
-            font-weight: bolder;
-            font-size: 1.1rem;
-            box-shadow: .2rem .1rem .4rem black;
-            position: fixed;
-            top:32rem;
-            right: 4rem;
-        }
+  <style>
+    html {
+      font-size: 98%;
+    }
 
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e2e2d9;
+      color: #333;
+    }
 
-        .download-btn:hover{
-            color: green;
-            background:gray;
-        }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #acccb9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #acccb9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    .header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #e0e0e0;
+    }
 
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
-        }
+    .header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #0056d7;
+    }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #0056d7fb;
-        }
+    .header p {
+      margin: 5px 0;
+      font-size: 1.1em;
+      color: #555;
+    }
 
-        .header p {
-            margin: 5px 0;
-            font-size: 1.1em;
-            color: #555;
-        }
+    .section {
+      margin: 20px 0;
+    }
 
-        .section {
-            margin: 20px 0;
-        }
+    .section h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #095bf1;
+    }
 
-        .section h2 {
-            margin-bottom: 10px;
-            font-size: 1.5em;
-            color: #095bf1;
-        }
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
+    .section ul li {
+      margin: 6px 0;
+    }
 
-        .section ul li {
-            margin: 5px 0;
-        }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-        .section ul li strong {
-            color: #333;
-        }
+    .skills span {
+      background: #075bf7;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin: 5px;
+      font-size: 0.9em;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-        }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
 
-        .skills span {
-            background: #075bf7;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            margin: 5px;
-            font-size: 0.9em;
-        }
+    .download-btn {
+      border: none;
+      background: black;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s ease;
+    }
 
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #888;
-        }
-    </style>
+    .download-btn:hover {
+      background: #333;
+      color: #0f0;
+    }
+
+    a {
+      color: #0056d7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Atoyebi Damilare Moses</h1>
-            <p>Certified Web Developer | UI/UX Designer | Computer Scientist</p>
-            <p>Lagos, Nigeria | Single | DOB: July 7</p>
-        </div>
 
-        <div class="section">
-            <h2>Professional Summary</h2>
-            <p>Dedicated and detail-oriented web developer with a strong background in UI/UX design. Proficient in modern web technologies and frameworks. Experienced in creating responsive and user-friendly applications. Passionate about solving complex problems and delivering exceptional digital experiences.</p>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>NIIT Forte, Surulere</strong> - Certified Web Developer and UI/UX Designer</li>
-                <li><strong>Current:</strong> Bachelor of Science in Computer Science</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <div class="skills">
-                <span>React</span>
-                <span>Python</span>
-                <span>JavaScript</span>
-                <span>Java</span>
-                <span>CSS</span>
-                <span>HTML</span>
-                <span>Font Awesome</span>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Work Experience</h2>
-            <ul>
-                <li><strong>IT Personnel</strong> - Gocapy Logistics</li>
-                <li><strong>Store Control and Keeper</strong> - Amarillo Nigeria Limited</li>
-                <li><strong>Freelance Developer</strong> - Upwork and various projects (<em>CURRENT</em>)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Portfolio</h2>
-            <p><a href="https://damiemegah.github.io/portfolio" target="_blank">View My Projects</a></p>
-        </div>
-
-        <div class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Certified Web Developer - NIIT Forte</li>
-                <li>UI/UX Design Certification</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Personal Attributes</h2>
-            <ul>
-                <li>Excellent problem-solving skills</li>
-                <li>Strong attention to detail</li>
-                <li>Effective communication and teamwork</li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            &copy; 2024 Atoyebi Damilare Moses
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-user"></i> Atoyebi Damilare Moses</h1>
+      <p><i class="fas fa-code"></i> Certified Web Developer | UI/UX Designer | Computer Scientist</p>
+      <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria | <i class="fas fa-birthday-cake"></i> DOB: July 7</p>
     </div>
 
-    <a href="javascript:window.print()" class="download-btn">Download/Print</a>
+    <div class="section">
+      <h2><i class="fas fa-info-circle"></i> Professional Summary</h2>
+      <p>Dedicated and detail-oriented web developer with a strong background in UI/UX design. Skilled in modern frameworks & technologies, building responsive and user-friendly applications. Passionate about solving complex problems and delivering exceptional digital experiences.</p>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+      <ul>
+        <li><strong>NIIT Forte, Surulere</strong> - Certified Web Developer & UI/UX Designer</li>
+        <li><strong>Current:</strong> B.Sc. in Computer Science</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+      <div class="skills">
+        <span>React</span>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>Java</span>
+        <span>CSS</span>
+        <span>HTML</span>
+        <span>Font Awesome</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+      <ul>
+        <li><strong>IT Personnel</strong> - Gocapy Logistics</li>
+        <li><strong>Store Control and Keeper</strong> - Amarillo Nigeria Limited</li>
+        <li><strong>Freelance Developer</strong> - Upwork & other projects (<em>CURRENT</em>)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
+      <p><a href="https://damiemegah.github.io/portfolio" target="_blank"><i class="fas fa-external-link-alt"></i> View My Projects</a></p>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-certificate"></i> Certifications</h2>
+      <ul>
+        <li>Certified Web Developer - NIIT Forte</li>
+        <li>UI/UX Design Certification</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-user-check"></i> Personal Attributes</h2>
+      <ul>
+        <li>Excellent problem-solving skills</li>
+        <li>Strong attention to detail</li>
+        <li>Effective communication and teamwork</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      &copy; 2024 Atoyebi Damilare Moses
+    </div>
+  </div>
+
+  <button onclick="window.print()" class="download-btn">
+    <i class="fas fa-download"></i> Download/Print
+  </button>
 
 </body>
 </html>
