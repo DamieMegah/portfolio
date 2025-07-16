@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atoyebi Damilare Moses - CV</title>
 
-  <!-- Font Awesome CDN -->
-  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ✅ Free Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     html {
@@ -18,33 +17,33 @@
       font-family: 'Segoe UI', Tahoma, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #e2e2d9;
+      background-color: #f4f4f4;
       color: #333;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 20px auto;
-      background: #acccb9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
 
     .header {
       text-align: center;
-      padding-bottom: 20px;
       border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 15px;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2em;
       color: #0056d7;
     }
 
     .header p {
-      margin: 5px 0;
+      margin: 6px 0;
       font-size: 1.1em;
       color: #555;
     }
@@ -54,9 +53,12 @@
     }
 
     .section h2 {
-      margin-bottom: 10px;
       font-size: 1.5em;
       color: #095bf1;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .section ul {
@@ -71,20 +73,36 @@
     .skills {
       display: flex;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .skills span {
-      background: #075bf7;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 4px;
-      margin: 5px;
-      font-size: 0.9em;
+    .skill-icon {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f0f0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.95em;
     }
+
+    .skill-icon i {
+      font-size: 1.2em;
+    }
+
+    /* ✅ Brand colors */
+    .react { color: #61DBFB; }
+    .python { color: #3776AB; }
+    .javascript { color: #F7DF1E; }
+    .java { color: #007396; }
+    .css { color: #264de4; }
+    .html { color: #e34c26; }
+    .github { color: #000; }
+    .fa-figma { color: #F24E1E; }  /* approximate figma orange */
 
     .footer {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 0.9em;
       color: #888;
     }
@@ -94,14 +112,14 @@
       background: black;
       color: white;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       padding: 0.8rem 1.2rem;
       border-radius: 6px;
       position: fixed;
       bottom: 2rem;
       right: 2rem;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -134,13 +152,13 @@
 
     <div class="section">
       <h2><i class="fas fa-info-circle"></i> Professional Summary</h2>
-      <p>Dedicated and detail-oriented web developer with a strong background in UI/UX design. Skilled in modern frameworks & technologies, building responsive and user-friendly applications. Passionate about solving complex problems and delivering exceptional digital experiences.</p>
+      <p>Passionate and detail-oriented web developer with strong UI/UX skills. Skilled in modern frameworks & responsive design. Focused on solving complex problems and delivering impactful digital experiences.</p>
     </div>
 
     <div class="section">
       <h2><i class="fas fa-graduation-cap"></i> Education</h2>
       <ul>
-        <li><strong>NIIT Forte, Surulere</strong> - Certified Web Developer & UI/UX Designer</li>
+        <li><strong>NIIT Forte, Surulere</strong> – Certified Web Developer & UI/UX Designer</li>
         <li><strong>Current:</strong> B.Sc. in Computer Science</li>
       </ul>
     </div>
@@ -148,22 +166,23 @@
     <div class="section">
       <h2><i class="fas fa-tools"></i> Technical Skills</h2>
       <div class="skills">
-        <span>React</span>
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>Java</span>
-        <span>CSS</span>
-        <span>HTML</span>
-        <span>Font Awesome</span>
+        <span class="skill-icon react"><i class="fab fa-react"></i> React</span>
+        <span class="skill-icon python"><i class="fab fa-python"></i> Python</span>
+        <span class="skill-icon javascript"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="skill-icon java"><i class="fab fa-java"></i> Java</span>
+        <span class="skill-icon css"><i class="fab fa-css3-alt"></i> CSS</span>
+        <span class="skill-icon html"><i class="fab fa-html5"></i> HTML</span>
+        <span class="skill-icon github"><i class="fab fa-github"></i> GitHub</span>
+        <span class="skill-icon"><i class="fab fa-figma"></i> Graphics Design</span>
       </div>
     </div>
 
     <div class="section">
       <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
       <ul>
-        <li><strong>IT Personnel</strong> - Gocapy Logistics</li>
-        <li><strong>Store Control and Keeper</strong> - Amarillo Nigeria Limited</li>
-        <li><strong>Freelance Developer</strong> - Upwork & other projects (<em>CURRENT</em>)</li>
+        <li><strong>IT Personnel</strong> – Gocapy Logistics</li>
+        <li><strong>Store Control and Keeper</strong> – Amarillo Nigeria Limited</li>
+        <li><strong>Freelance Developer</strong> – Upwork & various projects (<em>Current</em>)</li>
       </ul>
     </div>
 
@@ -175,7 +194,7 @@
     <div class="section">
       <h2><i class="fas fa-certificate"></i> Certifications</h2>
       <ul>
-        <li>Certified Web Developer - NIIT Forte</li>
+        <li>Certified Web Developer – NIIT Forte</li>
         <li>UI/UX Design Certification</li>
       </ul>
     </div>
