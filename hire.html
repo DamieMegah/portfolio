@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damie-Hire-Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="hire-body">
+  
+<section class="hire-me">
+  <h2>Hire Damie</h2>
+  <p>Looking to collaborate, offer a contract, or a permanent role? Fill this short form and let's connect!</p>
+  
+  <form action="https://formspree.io/f/xldeylye" method="post" class="hire-form">
+    <label>
+      Full Name
+      <input type="text" name="name" placeholder="Your name or company" required>
+    </label>
+
+   
+    <label>
+     Phone 
+     <input type="tel" name="phone" placeholder="+234..." required>
+    </label>
+
+    <label>
+      Email(optional)
+      <input type="email" name="email" placeholder="example@mail.com" >
+    </label>
+
+
+    <label>
+      I'm interested in
+      <select name="type" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="contract">Contract</option>
+        <option value="fulltime">Permanent Role</option>
+      </select>
+    </label>
+
+    <label>
+      Message
+      <textarea name="message" placeholder="Tell me a bit about your project or idea" required></textarea>
+    </label>
+
+    <button type="submit">Send Request</button>
+  </form>
+</section>
+  
+</body>
+</html>
