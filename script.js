@@ -58,6 +58,7 @@ contactForm.addEventListener('submit', function(e) {
     
     // Get the form data
     const formData = new FormData(this);
+
     const data = Object.fromEntries(formData.entries());
     
     // 2. SEND the data using fetch (or async/await)
@@ -89,33 +90,32 @@ contactForm.addEventListener('submit', function(e) {
         alert('An unexpected error occurred. Please try again.');
         console.error('Fetch error:', error);
     });
-});
+});const texts = [
+    "SaaS it up, buttercup!🤑",
+    "How would you React, If I say I love Vue😍",
+    "You can vibe,I can Vite 🤝 ",
+    "Tailwind? More like Tail-win!💰",
+    "Flex the idea,I flex the page🥂",
+];
+const textEl = document.getElementById('bubbleText');
+let idx = 0;
+const DISPLAY_TIME = 3000; // ms the text stays fully visible
+const FADE_TIME = 600;     // should match CSS transition
+let paused = false;        // Initialize paused flag
 
- const texts = [
-      "SaaS it up, buttercup!🤑",
-      "How would you React, If I say I love Vue😍",
-      "You can vibe,I can Vite 🤝 ",
-      "Tailwind? More like Tail-win!💰",
-      "Flex the idea,I flex the page🥂",
-    ];
-    const textEl = document.getElementById('bubbleText');
-    let idx = 0;
-    const DISPLAY_TIME = 3000; // ms the text stays fully visible
-    const FADE_TIME = 600;     // should match CSS transition
+// Initialize first text
+textEl.textContent = texts[idx];
+// allow small initial entrance
+requestAnimationFrame(()=> textEl.classList.add('visible'));
 
-    // Initialize first text
-    textEl.textContent = texts[idx];
-    // allow small initial entrance
-    requestAnimationFrame(()=> textEl.classList.add('visible'));
+// Cycle function
+function nextText(){
+    // fade out
+    textEl.classList.remove('visible');
+    textEl.classList.add('out');
 
-    // Cycle function
-    function nextText(){
-      // fade out
-      textEl.classList.remove('visible');
-      textEl.classList.add('out');
-
-      // after fade-out, change text, then fade-in
-      setTimeout(()=>{
+    // after fade-out, change text, then fade-in
+    setTimeout(()=>{
         idx = (idx + 1) % texts.length;
         textEl.textContent = texts[idx];
 
@@ -123,44 +123,43 @@ contactForm.addEventListener('submit', function(e) {
         textEl.classList.remove('out');
         // tiny delay to ensure the browser registers the class change
         requestAnimationFrame(()=> textEl.classList.add('visible'));
-      }, FADE_TIME);
-    }
+    }, FADE_TIME);
+}
 
-    // Start loop: show text for DISPLAY_TIME, then transition
-    setInterval(nextText, DISPLAY_TIME + FADE_TIME);
+// Implement pause behavior
+document.querySelector('.wrapper').addEventListener('mouseenter', () => {
+    paused = true;
+});
+document.querySelector('.wrapper').addEventListener('mouseleave', () => {
+    paused = false;
+});
 
-    // Optional: pause on hover for reading comfort
-    document.querySelector('.wrapper').addEventListener('mouseenter', () => {
-      // stop cycling by clearing interval? easier: set a paused flag
-      paused = true;
-    });
-    document.querySelector('.wrapper').addEventListener('mouseleave', () => {
-      paused = false;
-    });
-
-    // implement pause behavior (non-blocking)
-    let paused = false;
-    // use a manual loop instead of pure setInterval so we can pause
-    (function loop(){
-      const total = DISPLAY_TIME + FADE_TIME;
-      setTimeout(async function step(){
-        if (!paused) nextText();
+// Manual loop for text cycling and pause functionality
+(function loop(){
+    const totalDelay = DISPLAY_TIME + FADE_TIME;
+    
+    // Use setTimeout to wait for the total cycle duration
+    setTimeout(function step(){
+        if (!paused) {
+            nextText();
+        }
+        // Call the loop again to continue the cycle (recursively)
         loop();
-      }, total);
-    })();
+    }, totalDelay);
+})();
 
-     const scrollTopBtn = document.getElementById("scrollTopBtn");
+// Scroll to top button (Keep this part as it is)
+const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollTopBtn.classList.add("show");
-    } else {
-      scrollTopBtn.classList.remove("show");
-    }
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
 
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 });

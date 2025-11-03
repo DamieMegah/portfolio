@@ -44,6 +44,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      max-width: 100%;
+}
+
+html{
+     overflow-x: hidden;
 }
 
 body {
@@ -282,7 +287,7 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -488,13 +493,13 @@ body.nav-open .hamburger .bar:nth-child(3) {
 }
 
 .headshot-wrapper {
-    width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto 1.5rem;
     border: 3px solid var(--goldenrod);
     text-align:center;
     /* Neon Glow Effect */
-    box-shadow: 0 0 10px var(--goldenrod), 0 0 20px rgba(218, 165, 32, 0.4);
+    box-shadow: 0 0 10px var(--goldenrod), 0 0 10px rgba(218, 165, 32, 0.4);
     transition: box-shadow var(--transition-speed);
 }
 
@@ -503,8 +508,8 @@ body.nav-open .hamburger .bar:nth-child(3) {
 }
 
 .headshot-wrapper img{
-    width:15.5rem;
-    height:15.5rem;
+    width:18rem;
+    height:17.5rem;
 }
 
 /* Skill Tags */
@@ -790,6 +795,7 @@ footer {
     border-top: 1px solid var(--border-color);
     color: var(--secondary-text-color);
     font-size: 0.9rem;
+    overflow-x: hidden;
 }
 
 
