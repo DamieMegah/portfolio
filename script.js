@@ -162,4 +162,30 @@ window.addEventListener("scroll", () => {
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+const faqLink = document.getElementById("faq-link");
+const faqDetails = document.getElementById("faq-details");
+const faqSection = document.getElementById("faq");
+
+faqLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  
+  faqDetails.open = true; // open FAQ
+  faqSection.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
+// track last scroll position
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  const rect = faqSection.getBoundingClientRect();
+  const currentScrollY = window.scrollY;
+
+  // close FAQ only when user scrolls UP past the section
+  if (currentScrollY < lastScrollY && rect.top > 900) {
+    faqDetails.open = false;
+  }
+
+  lastScrollY = currentScrollY;
+});
+})
