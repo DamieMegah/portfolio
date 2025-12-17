@@ -555,6 +555,12 @@ body.nav-open .hamburger .bar:nth-child(3) {
     overflow: hidden;
 }
 
+.project-card img{
+    border: 0.1px outset var(--goldenrod);
+    width: auto;
+    height: 12rem;
+}
+
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px var(--shadow-color);
@@ -618,41 +624,6 @@ body.nav-open .hamburger .bar:nth-child(3) {
 
 .project-card:hover .float-icon {
     opacity: 0.5;
-}
-
-#space-shooter:hover{
-    background: url('space-shooter.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-
-#e-commerce:hover{
-    background: url('e-commerce.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-#medsphere:hover{
-    background: url('medsphere.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-
-#campusnav:hover{
-    background: url('campusnav.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-
-#rolling-bricks:hover{
-    background: url('rolling-bricks.png');
-    background-size: cover;
-    background-position: center;
 }
 
 /* --- 7. Experience/Education Styles (Timeline) --- */
@@ -937,6 +908,12 @@ footer {
     .timeline-item .timeline-desc {
         margin: 0 0.5rem;
     }   
+    
+.project-card:hover .project-links a {
+    padding: 0px 0px;
+    background-color: var(--card-background);
+    text-shadow:0 10px 20px var(--shadow-color);
+}
     .contact-container {
         flex-direction: column;
         gap: 3rem;
