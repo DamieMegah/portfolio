@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initialize AOS (Animation On Scroll)
+    //  Initialize AOS (Animation On Scroll)
     AOS.init({
         duration: 800,
         once: true, // Animations should only happen once
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         offset: 100 // Trigger animations a little sooner
     });
 
-    // 2. Hamburger Menu Toggle (Unique Transformation)
+    //  Hamburger Menu Toggle (Unique Transformation)
     const hamburger = document.querySelector('.hamburger');
     const body = document.body;
     const navLinks = document.querySelector('.nav-links');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Theme Toggle (Dark/Light Mode)
+    //  Theme Toggle (Dark/Light Mode)
     const themeToggle = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
 
@@ -49,11 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
     icon.classList.add(savedTheme === 'dark' ? 'fa-sun' : 'fa-moon');
 
 
-  // 4. Contact Form Submission (Placeholder for actual POST logic)
+  //  Contact Form Submission (Placeholder for actual POST logic)
 const contactForm = document.getElementById('contact-form');
 
 contactForm.addEventListener('submit', function(e) {
-    // 1. STOP the default page refresh/submission
     e.preventDefault(); 
     
     // Get the form data
@@ -61,18 +60,18 @@ contactForm.addEventListener('submit', function(e) {
 
     const data = Object.fromEntries(formData.entries());
     
-    // 2. SEND the data using fetch (or async/await)
-    // Replace the Formspree URL with your actual one
+    //  SEND the data using fetch (or async/await)
+    
     fetch(this.action, { 
         method: this.method,
         body: formData,
         headers: {
-            'Accept': 'application/json' // Good practice for Formspree
+            'Accept': 'application/json' 
         }
     })
     .then(response => {
         if (response.ok) {
-            // 3. ONLY reset the form after a successful send
+            //  ONLY reset the form after a successful send
             alert(`Thank you ${data.name}! Your message has been sent successfully.`);
             this.reset(); 
         } else {
@@ -91,11 +90,11 @@ contactForm.addEventListener('submit', function(e) {
         console.error('Fetch error:', error);
     });
 });const texts = [
-    "SaaS it up, buttercup!🤑",
-    "How would you React, If I say I love Vue😍",
-    "You can vibe,I can Vite 🤝 ",
-    "Tailwind? More like Tail-win!💰",
-    "Flex the idea,I flex the page🥂",
+    "SaaS it up, buttercup!",
+    "How would you React, If I say I love Vue",
+    "You can vibe,I can Vite ",
+    "Tailwind? More like Tail-win!",
+    "Flex the idea,I flex the page",
 ];
 const textEl = document.getElementById('bubbleText');
 let idx = 0;
