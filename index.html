@@ -1,493 +1,825 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atoyebi Damilare (DamieMegah) | Digital Solution Provider</title>
-    <meta name="description" content="Digital solution provider and software developer focused on building practical web applications, business systems,management dashboards, and scalable tech solutions for startups and growing businesses." />
-    <!-- Open Graph / Facebook -->
-<meta property="og:title" content="Atoyebi Damilare (DamieMegah) | Digital Solution Provider">
-<meta property="og:description" content="Digital solution provider and software developer focused on building practical web applications, business systems, management dashboards, and scalable tech solutions for startups and growing businesses.">
-<meta property="og:image" content="https://damiemegah.github.io/portfolio/damie.jpg">
-<meta property="og:url" content=" https://damiemegah.github.io/portfolio/#">
-<meta property="og:type" content="website">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="logo.jpg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you offer remote services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I offer remote services to clients worldwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you design my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I provide technical services which include website development, website design, website icon design, and website management."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I know if my website is fast?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can test your website's speed using Google PageSpeed Insights, GTmetrix, or Pingdom."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you optimize my website for search engines?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I can optimize your site’s SEO structure, content, and performance for better Google rankings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on complexity — typically 1 to 4 weeks for most projects."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you maintain websites after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I provide ongoing website maintenance, updates, and security checks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What technologies do you use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I use HTML, CSS, JavaScript, React, and modern frameworks tailored to your project needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help me fix my existing website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I can debug, redesign, or rebuild your existing website to improve performance and UX."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you handle e-commerce websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I develop e-commerce sites with secure payment gateways and inventory management features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Cost varies based on complexity and features. Basic websites start from ₦100,000 and scale up with requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you make my website mobile-friendly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all websites I design are responsive and optimized for phones, tablets, and desktops."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer UI/UX design services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I design clean, modern, and user-friendly interfaces tailored to your brand and audience."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I don’t have content yet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I can help guide your content structure and recommend strategies to create engaging copy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide web hosting services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I can recommend reliable hosting providers and assist you with setup and configuration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you integrate APIs or third-party tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I integrate APIs such as payment gateways, Google Maps, and CRM systems seamlessly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will you teach me how to manage my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, after delivery, I can provide basic training so you can manage your website confidently."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help me with domain and email setup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I assist with domain purchase, DNS setup, and professional business email configuration."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer graphics or branding services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, I can create logos, icons, and brand identity materials that match your website design."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What payment methods do you accept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "I accept bank transfers, PayPal, and other secure digital payment options."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact you?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach me via email or through the contact form on my website."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Atoyebi Damilare (DamieMegah) | Digital Solution Provider">
-<meta name="twitter:description" content="Digital solution provider and software developer focused on building practical web applications, business systems, management dashboards, and scalable tech solutions for startups and growing businesses.">
-<meta name="twitter:image" content="https://damiemegah.github.io/portfolio/damie.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpg" href="logo.jpg">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do you offer remote services?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I offer remote services to clients worldwide." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you design my website?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I provide technical services which include website development, website design, website icon design, and website management." }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I know if my website is fast?",
-      "acceptedAnswer": { "@type": "Answer", "text": "You can test your website's speed using Google PageSpeed Insights, GTmetrix, or Pingdom." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you optimize my website for search engines?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I can optimize your site’s SEO structure, content, and performance for better Google rankings." }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does it take to build a website?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends on complexity — typically 1 to 4 weeks for most projects." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you maintain websites after launch?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I provide ongoing website maintenance, updates, and security checks." }
-    },
-    {
-      "@type": "Question",
-      "name": "What technologies do you use?",
-      "acceptedAnswer": { "@type": "Answer", "text": "I use HTML, CSS, JavaScript, React, and modern frameworks tailored to your project needs." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you help me fix my existing website?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I can debug, redesign, or rebuild your existing website to improve performance and UX." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you handle e-commerce websites?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I develop e-commerce sites with secure payment gateways and inventory management features." }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does a website cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Cost varies based on complexity and features." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you make my website mobile-friendly?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, all websites I design are responsive and optimized for phones, tablets, and desktops." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer UI/UX design services?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I design clean, modern, and user-friendly interfaces tailored to your brand and audience." }
-    },
-    {
-      "@type": "Question",
-      "name": "What if I don’t have content yet?",
-      "acceptedAnswer": { "@type": "Answer", "text": "I can help guide your content structure and recommend strategies to create engaging copy." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide web hosting services?",
-      "acceptedAnswer": { "@type": "Answer", "text": "I can recommend reliable hosting providers and assist you with setup and configuration." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you integrate APIs or third-party tools?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I integrate APIs such as payment gateways, Google Maps, and CRM systems seamlessly." }
-    },
-    {
-      "@type": "Question",
-      "name": "Will you teach me how to manage my website?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, after delivery, I can provide basic training so you can manage your website confidently." }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you help me with domain and email setup?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I assist with domain purchase, DNS setup, and professional business email configuration." }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer graphics or branding services?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, I can create logos, icons, and brand identity materials that match your website design." }
-    },
-    {
-      "@type": "Question",
-      "name": "What payment methods do you accept?",
-      "acceptedAnswer": { "@type": "Answer", "text": "I accept bank transfers, PayPal, and secure digital payment option" }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contact you?",
-      "acceptedAnswer": { "@type": "Answer", "text": "You can reach me via email or through the contact form on my website." }
-    }
-  ]
-}
-</script>
-
-
-</head>
-<body>
-
-              <!-- Scroll to Top Button -->
-      <button id="scrollTopBtn" aria-label="Scroll to top" >
-  ↑
-      </button>
-
-
-    <a id="floating-whatsapp" href="https://wa.me/2347059460248" target="_blank" title="Connect via WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      id="floating-whatsapp"
+      href="https://wa.me/2347059460248"
+      target="_blank"
+      title="Connect via WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
 
     <header id="navbar">
-        <a href="#hero" class="logo">DAMIE<span class="golden-dot">.</span></a>
-        <nav class="nav-links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-            <a href="#faq" id="faq-link">FAQs</a>
-        </nav>
-        <button id="theme-toggle" aria-label="Toggle Theme"><i class="fas fa-sun"></i></button>
+      <a href="#hero" class="logo">DAMIE<span class="golden-dot">.</span></a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq" id="faq-link">FAQs</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle Theme">
+        <i class="fas fa-sun"></i>
+      </button>
 
-        <button class="hamburger" aria-label="Toggle Navigation">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>
+      <button class="hamburger" aria-label="Toggle Navigation">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
     </header>
 
     <main>
-        <section id="hero" class="section-full-height">
-            <div class="wireframe-bg"></div> <div class="hero-content">
-                <p class="greeting" data-aos="fade-up" data-aos-delay="100">Hello there,</p>
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
-                    Hi, I’m <span class="text-stroke-fill">Damie</span>
-                </h1>
-                <h2 class="hero-tagline" data-aos="fade-up" data-aos-delay="500">
-                    I build solutions that work.
-                </h2>
-                <a href="#projects" class="cta-button" data-aos="fade-up" data-aos-delay="700">
-                    Explore 
-                </a>
-                 <a href="hire.html" class="cta-button-2" data-aos="fade-up" data-aos-delay="700">
-                    Hire Me
-                </a>
-                  <div class="wrapper" role="img" aria-label="Animated chat bubble showing rotating messages"  data-aos="fade-up" data-aos-delay="100">
-    <!-- Inline SVG chat bubble (stroke only) -->
-    <svg class="chat-svg glow" viewBox="0 0 100 60" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- main rounded bubble -->
-      <path class="bubble-shape"
-            d="M8 8 h68 a6 6 0 0 1 6 6 v22 a6 6 0 0 1 -6 6 H30 l-8 8 v-8 H8 a6 6 0 0 1 -6 -6 V14 a6 6 0 0 1 6 -6 z"
+      <section id="hero" class="section-full-height">
+        <div class="wireframe-bg"></div>
+        <div class="hero-content">
+          <p class="greeting" data-aos="fade-up" data-aos-delay="100">
+            Hello there,
+          </p>
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="300">
+            Hi, I’m <span class="text-stroke-fill">Damie</span>
+          </h1>
+          <h2 class="hero-tagline" data-aos="fade-up" data-aos-delay="500">
+            Let pioneer a new solution together.
+          </h2>
+          <a
+            href="#projects"
+            class="cta-button"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            Explore My Work
+          </a>
+          <a
+            href="hire.html"
+            class="cta-button-2"
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            Hire Me
+          </a>
+          <div
+            class="wrapper"
+            role="img"
+            aria-label="Animated chat bubble showing rotating messages"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <!-- Inline SVG chat bubble (stroke only) -->
+            <svg
+              class="chat-svg glow"
+              viewBox="0 0 100 60"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <!-- main rounded bubble -->
+              <path
+                class="bubble-shape"
+                d="M8 8 h68 a6 6 0 0 1 6 6 v22 a6 6 0 0 1 -6 6 H30 l-8 8 v-8 H8 a6 6 0 0 1 -6 -6 V14 a6 6 0 0 1 6 -6 z"
+              />
+            </svg>
+
+            <!-- text overlay -->
+            <div id="bubbleText" class="bubble-text" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-padding">
+        <h3 class="section-heading" data-aos="fade-right">01. About Me</h3>
+        <div class="about-container">
+          <div class="about-text" data-aos="fade-up">
+            <p>
+              I'm Atoyebi Damilare, a tech enthusiast and solution-driven mind.
+              My passion lies in transforming complex problems into clean,
+              efficient, and user-focused digital experiences.
+            </p>
+            <p>
+              I thrive on challenges and the continuous learning curve of the
+              tech industry, utilizing precision and creativity to deliver
+              high-quality web solutions.
+            </p>
+            <p class="tagline-note">
+              Mood: Confident, innovative, and problem-solving.
+            </p>
+          </div>
+          <div class="about-visual" data-aos="fade-left">
+            <div class="headshot-wrapper">
+              <img
+                src="damie.jpg"
+                alt="Atoyebi Damilare"
+                class="headshot"
+                loading="lazy"
+              />
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"
+                >JavaScript
+                <i class="fa-brands fa-js" style="color: #f7df1e"></i
+              ></span>
+              <span class="skill-tag"
+                >React <i class="fa-brands fa-react" style="color: #61dafb"></i
+              ></span>
+              <span class="skill-tag"
+                >Node.js
+                <i class="fa-brands fa-node-js" style="color: #68a063"></i
+              ></span>
+              <span class="skill-tag"
+                >PHP <i class="fa-brands fa-php" style="color: #777bb4"></i
+              ></span>
+              <span class="skill-tag"
+                >SQL <i class="fa-solid fa-database" style="color: #4479a1"></i
+              ></span>
+              <span class="skill-tag"
+                >Firebase <i class="fa-solid fa-fire" style="color: #ff9028"></i
+              ></span>
+              <span class="skill-tag"
+                >UI/UX
+                <i class="fa-solid fa-pen-ruler" style="color: #fff6f1"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section-padding">
+        <h3 class="section-heading" data-aos="fade-right">
+          02. Selected Projects
+        </h3>
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            id="playcrawler"
+            data-aos="zoom-in-up"
+            data-aos-delay="0"
+          >
+            <div class="float-icon"><i class="fas fa-film"></i></div>
+            <img
+              src="playcrawler.webp"
+              alt="PlayCrawler movie discovery web app"
+              loading="lazy"
             />
-      <!-- accent dotted inner stroke (follows shape but slightly inset) -->
-      <path class="bubble-accent"
-            d="M11 11 h62 a4 4 0 0 1 4 4 v20 a4 4 0 0 1 -4 4 H33 l-6 6 v-6 H11 a4 4 0 0 1 -4 -4 V15 a4 4 0 0 1 4 -4 z"
+            <h4>PlayCrawler</h4>
+            <p class="summary">
+              A movie discovery web app with 600+ active users, browse new
+              releases, watch trailers, get accurate film info, and get routed
+              to a downloadable link.
+            </p>
+            <div class="project-links">
+              <a href="playcrawle.netlify.app" target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a
+                href="https://github.com/Damiemegah/playcrawler"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            id="campusnav"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            <div class="float-icon"><i class="fas fa-location"></i></div>
+            <img src="campusnav.webp" alt="campusnav" loading="lazy" />
+            <h4>CampusNav+</h4>
+            <p class="summary">
+              A navigation app for campus buildings, with more than 800+ active
+              users, featuring real-time location tracking and interactive maps.
+            </p>
+            <div class="project-links">
+              <a href="http://yctcampusnav.netlify.app/" target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a href="https://github.com/Damiemegah" target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="project-card"
+            id="medsphere"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            <div class="float-icon"><i class="fas fa-hospital"></i></div>
+            <img
+              src="medsphere.webp"
+              alt="medspherehealthcare"
+              loading="lazy"
             />
-    </svg>
-
-    <!-- text overlay -->
-    <div id="bubbleText" class="bubble-text" aria-live="polite"></div>
-  </div>
+            <h4>Healthcare Solution Provider Landing Page</h4>
+            <p class="summary">
+              A modern landing page design for a healthcare solution, featuring
+              user-friendly navigation and a clean layout.
+            </p>
+            <div class="project-links">
+              <a href="https://medspherehealthcare.com" target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a href="https://github.com/Damiemegah" target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="about" class="section-padding">
-            <h3 class="section-heading" data-aos="fade-right">01. About Me</h3>
-            <div class="about-container">
-                <div class="about-text" data-aos="fade-up">
-                    <p>I'm Atoyebi Damilare, a tech enthusiast and solution-driven mind. My passion lies in transforming complex problems into clean, efficient, and user-focused digital experiences.</p>
-                    <p>I thrive on challenges and the continuous learning curve of the tech industry, utilizing precision and creativity to deliver high-quality web solutions.</p>
-                    <p class="tagline-note">Mood: Confident, innovative, and problem-solving.</p>
-                </div>
-                <div class="about-visual" data-aos="fade-left">
-                    <div class="headshot-wrapper">
-                        <img src="damie.jpg" alt="Atoyebi Damilare" class="headshot">
-                    </div>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">AI Tools</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
-                </div>
+          <div
+            class="project-card"
+            data-aos="zoom-in-up"
+            id="e-commerce"
+            data-aos-delay="0"
+          >
+            <div class="float-icon"><i class="fas fa-shopping-cart"></i></div>
+            <img src="e-commerce.jpg" alt="e-commerce" loading="lazy" />
+            <h4>Futuristic E-Commerce Platform</h4>
+            <p class="summary">
+              A sleek, minimalist online store prototype using React and CSS
+              Grid, focused on performance and mobile responsiveness.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://damiemegah.github.io/Exclusive-wears/"
+                target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a href="https://github.com/Damiemegah" target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="projects" class="section-padding" >
-            <h3 class="section-heading" data-aos="fade-right">02. Selected Projects</h3>
-            <div class="projects-grid">
-
-                 <div class="project-card" id="campusnav" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="float-icon"><i class="fas fa-location"></i></div>
-                    <img src="campusnav.jpg" alt="campusnav">
-                    <h4>CampusNav+</h4>
-                    <p class="summary">A navigation app for campus buildings, with more than 800+ active users, featuring real-time location tracking and interactive maps.</p>
-                    <div class="project-links">
-                        <a href="http://yctcampusnav.netlify.app/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-                
-                 <div class="project-card" id="dashboard" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="float-icon"><i class="fas fa-cogs"></i></div>
-                    <img src="dashboard.jpg" alt="dashboard-interface-image">
-                    <h4>MIS Dashboard</h4>
-                    <p class="summary">A Dynamic Management Information System (MIS) dashboard that delivers real-time insights through interactive bar,
-                        pie, and line charts, enabling efficient data management and clear visualization of data flow and trends..</p>
-                    <div class="project-links">
-                        <a href="https://damiemegah.github.io/react-admin/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah/react-admin" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                 </div>
-
-
-                <div class="project-card" data-aos="zoom-in-up" id="e-commerce" data-aos-delay="0">
-                    <div class="float-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <img src="e-commerce.jpg" alt="e-commerce">
-                    <h4>Futuristic E-Commerce Platform</h4>
-                    <p class="summary">A sleek, minimalist online store prototype using React and CSS Grid, focused on performance and mobile responsiveness.</p>
-                    <div class="project-links">
-                        <a href="https://damiemegah.github.io/Exclusive-wears/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-                <div class="project-card" id="space-shooter" data-aos="zoom-in-up" data-aos-delay="150">
-                    <div class="float-icon"><i class="fas fa-gamepad"></i></div>
-                    <img src="space-shooter.jpg" alt="space-shooter">
-                    <h4>Space Shooter</h4>
-                    <p class="summary">A Vanilla JS Browser Game, interactive 2D game built entirely with Vanilla JavaScript, demonstrating strong DOM manipulation skills.</p>
-                    <div class="project-links">
-                        <a href="https://damiemegah.github.io/spaceShooter/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah/spaceshooter" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-
-                 <div class="project-card" id="rolling-bricks" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="float-icon"><i class="fas fa-gamepad"></i></div>
-                    <img src="icon-512.jpg" alt="rolling-bricks">
-                    <h4>Rolling Bricks tetris</h4>
-                    <p class="summary">A Tetris-inspired JavaScript game, crafted with rigorous DOM manipulation experience and CSS creativity.</p>
-                    <div class="project-links">
-                        <a href="https://damiemegah.github.io/rollingbrickgame/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/DamieMegah/rollingbrickgame" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-                 <div class="project-card" id="medsphere" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="float-icon"><i class="fas fa-hospital"></i></div>
-                    <img src="medsphere.jpg" alt="medspherehealthcare">
-                    <h4>Healthcare Solution Provider Landing Page</h4>
-                    <p class="summary">A modern landing page design for a healthcare solution, featuring user-friendly navigation and a clean layout.</p>
-                    <div class="project-links">
-                        <a href="https://medspherehealthcare.com" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-                 <div class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="float-icon"><i class="fas fa-code-branch"></i></div>
-                    <img src="text-to-speech .jpg" alt="$#%imageSample#$#">
-                    <h4>Reader</h4>
-                    <p class="summary">An application that transcribe text to speech in different languages.</p>
-                    <div class="project-links">
-                        <a href="https://damiemegah.github.io/reeader/" target="_blank"><i class="fas fa-eye"></i> Live Preview</a>
-                        <a href="https://github.com/Damiemegah" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
-                    </div>
-                </div>
-
-
+          <div
+            class="project-card"
+            id="marble"
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+          >
+            <div class="float-icon"><i class="fas fa-store"></i></div>
+            <img
+              src="marble.webp"
+              alt="Marble sales and showroom website"
+              loading="lazy"
+            />
+            <h4>Marble Sales &amp; Showroom</h4>
+            <p class="summary">
+              A showcase website for a marble sales and showroom business,
+              presenting the product catalog and showroom gallery in a clean,
+              elegant layout.
+            </p>
+            <div class="project-links">
+              <a href="https://damiemegah.github.io/mable/" target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a href="https://github.com/Damiemegah/mable" target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="experience" class="section-padding">
-            <h3 class="section-heading" data-aos="fade-right">03. Journey</h3>
-            <div class="timeline-container">
-                 <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <h4>Front-End Development and UI Design</h4>
-                    <span class="institution">Cousera.org</span>
-                    <p class="timeline-desc">A bootcamp course focused on front-end technologies, and user interaction, including HTML, CSS, and JavaScript.</p>
-                </div>
-
-                 <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <h4>JavaScript Fundamentals</h4>
-                    <span class="institution">FreeCodeCamp</span>
-                    <p class="timeline-desc">A comprehensive course covering JavaScript basics, including syntax, DOM manipulation, and event handling.</p>
-                </div>
-
-                 <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <h4>Full-Stack Development</h4>
-                    <span class="institution">NIIT</span>
-                    <p class="timeline-desc">Focused practical training in full-stack web technologies, React, Typescript, Node.js etc, building real-world applications and professional standards.</p>
-                </div>
-
-                 <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
-                    <h4>Introduction To OOP (JAVA)</h4>
-                    <span class="institution">FreeCodeCamp</span>
-                    <p class="timeline-desc">Intensive practical training in Java programming, object-oriented design, and software development methodologies.</p>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                    <div class="timeline-dot"></div>
-                    <h4>Diploma in Computer Science</h4>
-                    <span class="institution">Yaba College of Technology</span>
-                    <p class="timeline-desc">Acquired a strong academic foundation in software principles, algorithms, and technical problem-solving.</p>
-                </div>
+          <div
+            class="project-card"
+            id="space-shooter"
+            data-aos="zoom-in-up"
+            data-aos-delay="150"
+          >
+            <div class="float-icon"><i class="fas fa-gamepad"></i></div>
+            <img src="space-shooter.jpg" alt="space-shooter" loading="lazy" />
+            <h4>Space Shooter</h4>
+            <p class="summary">
+              A Vanilla JS Browser Game, interactive 2D game built entirely with
+              Vanilla JavaScript, demonstrating strong DOM manipulation skills.
+            </p>
+            <div class="project-links">
+              <a
+                href="https://damiemegah.github.io/spaceShooter/"
+                target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a
+                href="https://github.com/Damiemegah/spaceshooter"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="contact" class="section-padding">
-            <h3 class="section-heading" data-aos="fade-right">04. Get In Touch</h3>
-            <div class="contact-container">
-                <form action="https://formspree.io/f/xldeylye" method="post" id="contact-form" data-aos="fade-up">
-                    <p>Have a project or opportunity? Let's connect and build the next solution together.</p>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-
-                <div class="social-links" data-aos="fade-left">
-                    <h4>Connect Digitally</h4>
-                    <a href="mailto:dareyjustice@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i> dareyjustice@gmail.com</a>
-                    <a href="https://github.com/Damiemegah" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.linkedin.com/in/damiemegah/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                    <a href="https://www.facebook.com/damilare.atoyebi.39/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-
-                    <br>
-<section class="faq-section" id="faq">
-  <details id="faq-details" >
-    <summary>FAQs (Frequently Asked Questions)</summary>
-
-    <div class="faq-list">
-      <details>
-        <summary>1. Do you offer remote services?</summary>
-        <p>Yes, I offer remote services to clients worldwide.</p>
-      </details>
-
-      <details>
-        <summary>2. Can you design my website?</summary>
-        <p>Yes, I provide technical services which include website development, website design, website icon design, and website management.</p>
-      </details>
-
-      <details>
-        <summary>3. How do I know if my website is fast?</summary>
-        <p>You can test your website's speed using Google PageSpeed Insights, GTmetrix, or Pingdom.</p>
-      </details>
-
-      <details>
-        <summary>4. Can you optimize my website for search engines?</summary>
-        <p>Yes, I can optimize your site’s SEO structure, content, and performance for better Google rankings.</p>
-      </details>
-
-      <details>
-        <summary>5. How long does it take to build a website?</summary>
-        <p>It depends on complexity — typically 1 to 4 weeks for most projects.</p>
-      </details>
-
-      <details>
-        <summary>6. Do you maintain websites after launch?</summary>
-        <p>Yes, I provide ongoing website maintenance, updates, and security checks.</p>
-      </details>
-
-      <details>
-        <summary>7. What technologies do you use?</summary>
-        <p>I use HTML5, CSS5, JavaScript, React,WordPress Elementor, PHP, Node.js,C# and modern frameworks tailored to your project needs.</p>
-      </details>
-
-      <details>
-        <summary>8. Can you help me fix my existing website?</summary>
-        <p>Yes, I can debug, redesign, or rebuild your existing website to improve performance and UX.</p>
-      </details>
-
-      <details>
-        <summary>9. Do you handle e-commerce websites?</summary>
-        <p>Yes, I develop e-commerce sites with secure payment gateways and inventory management features.</p>
-      </details>
-
-      <details>
-        <summary>10. How much does a website cost?</summary>
-        <p>Cost varies based on complexity and features.</p>
-      </details>
-
-      <details>
-        <summary>11. Can you make my website mobile-friendly?</summary>
-        <p>Yes, all websites I design are responsive and optimized for phones, tablets, and desktops.</p>
-      </details>
-
-      <details>
-        <summary>12. Do you offer UI/UX design services?</summary>
-        <p>Yes, I design clean, modern, and user-friendly interfaces tailored to your brand and audience.</p>
-      </details>
-
-      <details>
-        <summary>13. What if I don’t have content yet?</summary>
-        <p>I can help guide your content structure and recommend strategies to create engaging copy.</p>
-      </details>
-
-      <details>
-        <summary>14. Do you provide web hosting services?</summary>
-        <p>I can recommend reliable hosting providers and assist you with setup and configuration.</p>
-      </details>
-
-      <details>
-        <summary>15. Can you integrate APIs or third-party tools?</summary>
-        <p>Yes, I integrate APIs such as payment gateways, Google Maps, and CRM systems seamlessly.</p>
-      </details>
-
-      <details>
-        <summary>16. Will you teach me how to manage my website?</summary>
-        <p>Yes, after delivery, I can provide basic training so you can manage your website confidently.</p>
-      </details>
-
-      <details>
-        <summary>17. Can you help me with domain and email setup?</summary>
-        <p>Yes, I assist with domain purchase, DNS setup, and professional business email configuration.</p>
-      </details>
-
-      <details>
-        <summary>18. Do you offer graphics or branding services?</summary>
-        <p>Yes, I can create logos, icons, and brand identity materials that match your website design.</p>
-      </details>
-
-      <details>
-        <summary>19. What payment methods do you accept?</summary>
-        <p>I accept bank transfers, PayPal, and other secure digital payment options.</p>
-      </details>
-
-      <details>
-        <summary>20. How can I contact you?</summary>
-        <p>You can reach me via email or through the contact form on my website.</p>
-      </details>
-    </div>
-  </details>
-</section>
-
-
-                </div>
+          <div class="project-card" data-aos="zoom-in-up" data-aos-delay="300">
+            <div class="float-icon"><i class="fas fa-code-branch"></i></div>
+            <h4>API Data Visualizer</h4>
+            <p class="summary">
+              An application that fetches and visualizes data from a public API,
+              presenting insights in interactive charts and graphs.
+            </p>
+            <div class="project-links">
+              <a href="#" target="_blank"
+                ><i class="fas fa-eye"></i> Live Preview</a
+              >
+              <a href="https://github.com/Damiemegah" target="_blank"
+                ><i class="fab fa-github"></i> GitHub Repo</a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section-padding">
+        <h3 class="section-heading" data-aos="fade-right">03. Journey</h3>
+        <div class="timeline-container">
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <h4>Front-End Development and UI Design</h4>
+            <span class="institution">Cousera.org</span>
+            <p class="timeline-desc">
+              A bootcamp course focused on front-end technologies, and user
+              interaction, including HTML, CSS, and JavaScript.
+            </p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <h4>JavaScript Fundamentals</h4>
+            <span class="institution">FreeCodeCamp</span>
+            <p class="timeline-desc">
+              A comprehensive course covering JavaScript basics, including
+              syntax, DOM manipulation, and event handling.
+            </p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <h4>Full-Stack Development</h4>
+            <span class="institution">NIIT</span>
+            <p class="timeline-desc">
+              Focused practical training in full-stack web technologies, React,
+              Typescript, Node.js etc, building real-world applications and
+              professional standards.
+            </p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <h4>Introduction To OOP (JAVA)</h4>
+            <span class="institution">FreeCodeCamp</span>
+            <p class="timeline-desc">
+              Intensive practical training in Java programming, object-oriented
+              design, and software development methodologies.
+            </p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <h4>Diploma in Computer Science</h4>
+            <span class="institution">Yaba College of Technology</span>
+            <p class="timeline-desc">
+              Acquired a strong academic foundation in software principles,
+              algorithms, and technical problem-solving.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-padding">
+        <h3 class="section-heading" data-aos="fade-right">04. Get In Touch</h3>
+        <div class="contact-container">
+          <form
+            action="https://formspree.io/f/xldeylye"
+            method="post"
+            id="contact-form"
+            data-aos="fade-up"
+          >
+            <p>
+              Have a project or opportunity? Let's connect and build the next
+              solution together.
+            </p>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+
+          <div class="social-links" data-aos="fade-left">
+            <h4>Connect Digitally</h4>
+            <a
+              href="mailto:dareyjustice@gmail.com"
+              target="_blank"
+              title="Email"
+              ><i class="fas fa-envelope"></i> dareyjustice@gmail.com</a
+            >
+            <a
+              href="https://github.com/Damiemegah"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/damiemegah/"
+              target="_blank"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i> LinkedIn</a
+            >
+            <a
+              href="https://www.facebook.com/damilare.atoyebi.39/"
+              target="_blank"
+              title="Facebook"
+              ><i class="fab fa-facebook-f"></i> Facebook</a
+            >
+
+            <br />
+            <section class="faq-section" id="faq">
+              <details id="faq-details">
+                <summary>FAQs (Frequently Asked Questions)</summary>
+
+                <div class="faq-list">
+                  <details>
+                    <summary>1. Do you offer remote services?</summary>
+                    <p>Yes, I offer remote services to clients worldwide.</p>
+                  </details>
+
+                  <details>
+                    <summary>2. Can you design my website?</summary>
+                    <p>
+                      Yes, I provide technical services which include website
+                      development, website design, website icon design, and
+                      website management.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>3. How do I know if my website is fast?</summary>
+                    <p>
+                      You can test your website's speed using Google PageSpeed
+                      Insights, GTmetrix, or Pingdom.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      4. Can you optimize my website for search engines?
+                    </summary>
+                    <p>
+                      Yes, I can optimize your site’s SEO structure, content,
+                      and performance for better Google rankings.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      5. How long does it take to build a website?
+                    </summary>
+                    <p>
+                      It depends on complexity — typically 1 to 4 weeks for most
+                      projects.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>6. Do you maintain websites after launch?</summary>
+                    <p>
+                      Yes, I provide ongoing website maintenance, updates, and
+                      security checks.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>7. What technologies do you use?</summary>
+                    <p>
+                      I use HTML, CSS, JavaScript, React, and modern frameworks
+                      tailored to your project needs.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      8. Can you help me fix my existing website?
+                    </summary>
+                    <p>
+                      Yes, I can debug, redesign, or rebuild your existing
+                      website to improve performance and UX.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>9. Do you handle e-commerce websites?</summary>
+                    <p>
+                      Yes, I develop e-commerce sites with secure payment
+                      gateways and inventory management features.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>10. How much does a website cost?</summary>
+                    <p>
+                      Cost varies based on complexity and features. Basic
+                      websites start from ₦100,000 and scale up with
+                      requirements.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      11. Can you make my website mobile-friendly?
+                    </summary>
+                    <p>
+                      Yes, all websites I design are responsive and optimized
+                      for phones, tablets, and desktops.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>12. Do you offer UI/UX design services?</summary>
+                    <p>
+                      Yes, I design clean, modern, and user-friendly interfaces
+                      tailored to your brand and audience.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>13. What if I don’t have content yet?</summary>
+                    <p>
+                      I can help guide your content structure and recommend
+                      strategies to create engaging copy.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>14. Do you provide web hosting services?</summary>
+                    <p>
+                      I can recommend reliable hosting providers and assist you
+                      with setup and configuration.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      15. Can you integrate APIs or third-party tools?
+                    </summary>
+                    <p>
+                      Yes, I integrate APIs such as payment gateways, Google
+                      Maps, and CRM systems seamlessly.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      16. Will you teach me how to manage my website?
+                    </summary>
+                    <p>
+                      Yes, after delivery, I can provide basic training so you
+                      can manage your website confidently.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      17. Can you help me with domain and email setup?
+                    </summary>
+                    <p>
+                      Yes, I assist with domain purchase, DNS setup, and
+                      professional business email configuration.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>
+                      18. Do you offer graphics or branding services?
+                    </summary>
+                    <p>
+                      Yes, I can create logos, icons, and brand identity
+                      materials that match your website design.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>19. What payment methods do you accept?</summary>
+                    <p>
+                      I accept bank transfers, PayPal, and other secure digital
+                      payment options.
+                    </p>
+                  </details>
+
+                  <details>
+                    <summary>20. How can I contact you?</summary>
+                    <p>
+                      You can reach me via email or through the contact form on
+                      my website.
+                    </p>
+                  </details>
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DamieMegah. Crafted with precision and creativity.</p>
+      <p>&copy; 2024 DamieMegah. Crafted with precision and creativity.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
